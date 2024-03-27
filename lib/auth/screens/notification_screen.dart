@@ -1,5 +1,4 @@
-import 'package:encanto/pages/bottom_nav.dart';
-import 'package:encanto/pages/homa_page.dart';
+import 'package:encanto/screens/bottom_nav.dart';
 import 'package:encanto/utils/colors.dart';
 import 'package:encanto/utils/size.dart';
 import 'package:encanto/widgets/global/container.dart';

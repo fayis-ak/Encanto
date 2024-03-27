@@ -1,8 +1,8 @@
 import 'package:encanto/auth/screens/notification_screen.dart';
-import 'package:encanto/pages/bottomnavigation/accound_scree.dart';
-import 'package:encanto/pages/bottomnavigation/offer_screen.dart';
-import 'package:encanto/pages/bottomnavigation/search_screen.dart';
-import 'package:encanto/pages/homa_page.dart';
+import 'package:encanto/screens/bottomnavigation/accound_scree.dart';
+import 'package:encanto/screens/bottomnavigation/offer_screen.dart';
+import 'package:encanto/screens/bottomnavigation/search_screen.dart';
+import 'package:encanto/screens/homa_page.dart';
 import 'package:encanto/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +29,7 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
+          height: 60,
           indicatorColor: ColorsClass.bordingscreen,
         ),
         child: NavigationBar(
