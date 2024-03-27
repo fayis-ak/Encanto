@@ -9,9 +9,11 @@ class Images {
   static const String tick = 'assets/images/tickmark.png';
 
   // succesfull
-  static const String successful = "assets/images/Ok.png"
-      // "assets/images/Ok.svg"
-      ;
+  static const String successful = "assets/images/Ok.png";
 
-  // 'assets/images/tick.svg';
+  // homepage
+  static const String hpeventimg = 'assets/images/Rectangle 95.png';
+  static const String hpcharity =  'assets/images/Rectangle 92.png';
+
+ 
 }
