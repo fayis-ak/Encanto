@@ -56,17 +56,22 @@ class Textformwidget extends StatelessWidget {
   final String hint;
   final Icon? sufix;
   final int? maxlenght;
+  final Color fillcolor;
   final TextEditingController? controller;
   final FormFieldValidator<String>? validation;
+   
 
-  const Textformwidget(
-      {super.key,
-      this.prifix,
-      required this.hint,
-      this.sufix,
-      this.controller,
-      this.validation,
-      this.maxlenght});
+  const Textformwidget({
+    super.key,
+    this.prifix,
+    required this.hint,
+    this.sufix,
+    this.controller,
+    this.validation,
+    this.maxlenght,
+    required this.fillcolor,
+     
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -79,17 +84,19 @@ class Textformwidget extends StatelessWidget {
       validator: validation,
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
-        fillColor: ColorsClass.whiteColor,
+        fillColor: fillcolor,
         filled: true,
         hintText: hint,
         hintStyle: GoogleFonts.tinos(color: Colors.grey),
         prefixIcon: prifix,
         suffixIcon: sufix,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            ResponsiveHelper.getWidth(context) * .020,
-          ),
-        ),
+        border:   OutlineInputBorder(
+
+                borderRadius: BorderRadius.circular(
+                  ResponsiveHelper.getWidth(context) * .020,
+                ),
+              )
+             
       ),
     );
   }

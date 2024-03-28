@@ -15,4 +15,6 @@ class ColorsClass {
 
   //drawer bg color
   static Color drawerbg = Color(0xFF6C6974);
+
+  static Color wedding = Color(0xFFF8C1AF);
 }

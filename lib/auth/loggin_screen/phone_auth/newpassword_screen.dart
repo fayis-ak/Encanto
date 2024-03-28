@@ -63,6 +63,8 @@ class NewPasswordScreen extends StatelessWidget {
                   height: ResponsiveHelper.getHeight(context) * .050,
                 ),
                 Textformwidget(
+                  
+                  fillcolor: ColorsClass.whiteColor,
                   controller: newpasswordController,
                   hint: 'New Password',
                   sufix: Icon(
@@ -84,6 +86,8 @@ class NewPasswordScreen extends StatelessWidget {
                   height: ResponsiveHelper.getHeight(context) * .050,
                 ),
                 Textformwidget(
+ 
+                  fillcolor: ColorsClass.whiteColor,
                   controller: conformcontroller,
                   hint: 'Conform Password',
                   prifix: Icon(
