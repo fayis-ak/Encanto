@@ -1,10 +1,12 @@
 import 'dart:developer';
 
 import 'package:encanto/auth/splash_screen/spalash_scren.dart';
+import 'package:encanto/screens/drawer/settings.dart';
 import 'package:encanto/screens/drawer/vender_screen.dart';
 import 'package:encanto/utils/colors.dart';
 import 'package:encanto/utils/image.dart';
 import 'package:encanto/utils/size.dart';
+import 'package:encanto/widgets/app_bar.dart';
 import 'package:encanto/widgets/global/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -60,7 +62,13 @@ class HomePage extends StatelessWidget {
                 text: 'Settings',
                 fontsize: ResponsiveHelper.getWidth(context) * .050,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SttingsDrawer(),
+                    ));
+              },
             ),
             Divider(
               color: ColorsClass.black,
@@ -159,37 +167,41 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  PreferredSizeWidget appBar() {
+    return AppBar(
+      title: Row(
+        children: [
+          Icon(
+            Icons.home,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Text('Home')
+        ],
+      ),
+      actions: [
+        Row(
+          children: [
+            Icon(Icons.favorite),
+            SizedBox(
+              width: 20,
+            ),
+            Icon(Icons.message),
+            SizedBox(
+              width: 20,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawerwid(context),
-      appBar: AppBar(
-        title: Row(
-          children: [
-            Icon(
-              Icons.home,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Text('Home')
-          ],
-        ),
-        actions: [
-          Row(
-            children: [
-              Icon(Icons.favorite),
-              SizedBox(
-                width: 20,
-              ),
-              Icon(Icons.message),
-              SizedBox(
-                width: 20,
-              ),
-            ],
-          ),
-        ],
-      ),
+      appBar: appBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [

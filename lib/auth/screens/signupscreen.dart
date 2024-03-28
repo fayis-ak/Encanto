@@ -66,6 +66,7 @@ class SignupScreen extends StatelessWidget {
                       ],
                     ),
                     Textformwidget(
+                      fillcolor: ColorsClass.whiteColor,
                       controller: _nameController,
                       hint: 'Enter Your name',
                       prifix: Icon(Icons.person_2_outlined),
@@ -94,6 +95,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                      fillcolor: ColorsClass.whiteColor,
                       maxlenght: 10,
                       controller: _numberController,
                       hint: 'Enter Your Number',
@@ -123,6 +125,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                      fillcolor: ColorsClass.whiteColor,
                       controller: _emailController,
                       hint: 'Enter Your Email',
                       prifix: Icon(Icons.mail),
@@ -151,6 +154,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                      fillcolor: ColorsClass.whiteColor,
                       controller: _password,
                       prifix: Icon(Icons.lock),
                       hint: 'Enter Your Password',
@@ -180,6 +184,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                        fillcolor: ColorsClass.whiteColor,
                         controller: _Conformpassword,
                         prifix: Icon(Icons.lock),
                         hint: 'Conform Password',

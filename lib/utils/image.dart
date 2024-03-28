@@ -13,7 +13,8 @@ class Images {
 
   // homepage
   static const String hpeventimg = 'assets/images/Rectangle 95.png';
-  static const String hpcharity =  'assets/images/Rectangle 92.png';
+  static const String hpcharity = 'assets/images/Rectangle 92.png';
 
- 
+  // events
+  static const String weddings = "assets/images/wedding.png";
 }

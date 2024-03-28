@@ -125,6 +125,8 @@ class LogginScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                       
+                      fillcolor: ColorsClass.whiteColor,
                       controller: email,
                       prifix: Icon(Icons.email),
                       hint: 'Enter your name',
@@ -152,6 +154,8 @@ class LogginScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                     
+                      fillcolor: ColorsClass.whiteColor,
                       maxlenght: 8,
                       prifix: Icon(Icons.lock),
                       hint: 'Enter your password',

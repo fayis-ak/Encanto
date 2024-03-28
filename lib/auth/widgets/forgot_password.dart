@@ -62,6 +62,7 @@ class ForgotPassword extends StatelessWidget {
                       horizontal: ResponsiveHelper.getWidth(context) * .040,
                     ),
                     child: Textformwidget(
+                      fillcolor: ColorsClass.whiteColor,
                       controller: forgotcontroller,
                       hint: 'Enter your Email/phone no',
                       validation: (value) {
