@@ -1,9 +1,9 @@
-import 'package:encanto/auth/splash_screen/spalash_scren.dart';
+import 'package:encanto/screens/mobile/bottom_nav.dart';
+import 'package:encanto/widgets/responsive_layout_builder.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: BottomNav(),
+      // home:const ResponsiveLyaout(),
     );
   }
 }

@@ -1,5 +1,3 @@
-import 'package:encanto/utils/colors.dart';
-import 'package:encanto/utils/size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -56,10 +54,12 @@ class Textformwidget extends StatelessWidget {
   final String hint;
   final Icon? sufix;
   final int? maxlenght;
-  final Color fillcolor;
+  final Color? fillcolor;
   final TextEditingController? controller;
   final FormFieldValidator<String>? validation;
-   
+  final Color? hintcolor;
+  final double radius;
+  final EdgeInsetsGeometry? contentpadding;
 
   const Textformwidget({
     super.key,
@@ -69,13 +69,15 @@ class Textformwidget extends StatelessWidget {
     this.controller,
     this.validation,
     this.maxlenght,
-    required this.fillcolor,
-     
+    this.fillcolor,
+    required this.radius,
+    this.hintcolor, this.contentpadding,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       autovalidateMode: AutovalidateMode.onUserInteraction,
       inputFormatters: [
         LengthLimitingTextInputFormatter(maxlenght),
@@ -84,19 +86,20 @@ class Textformwidget extends StatelessWidget {
       validator: validation,
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
+        contentPadding: contentpadding,
         fillColor: fillcolor,
         filled: true,
         hintText: hint,
-        hintStyle: GoogleFonts.tinos(color: Colors.grey),
+        hintStyle: GoogleFonts.tinos(
+          color: hintcolor,
+        ),
         prefixIcon: prifix,
         suffixIcon: sufix,
-        border:   OutlineInputBorder(
-
-                borderRadius: BorderRadius.circular(
-                  ResponsiveHelper.getWidth(context) * .020,
-                ),
-              )
-             
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(
+            radius,
+          ),
+        ),
       ),
     );
   }

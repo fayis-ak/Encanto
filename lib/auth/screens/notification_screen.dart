@@ -1,4 +1,4 @@
-import 'package:encanto/screens/bottom_nav.dart';
+import 'package:encanto/screens/mobile/bottom_nav.dart';
 import 'package:encanto/utils/colors.dart';
 import 'package:encanto/utils/size.dart';
 import 'package:encanto/widgets/global/container.dart';
@@ -6,9 +6,8 @@ import 'package:encanto/widgets/global/container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({super.key});
-  // horizontal: ResponsiveHelper.getWidth(context) * .040,
+class AllowNotificationScreen extends StatelessWidget {
+  const AllowNotificationScreen({super.key});
 
   Widget containerWidget(BuildContext context, String text) {
     return Container(

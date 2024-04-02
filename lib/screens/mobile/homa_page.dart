@@ -1,13 +1,16 @@
 import 'dart:developer';
-
 import 'package:encanto/auth/splash_screen/spalash_scren.dart';
-import 'package:encanto/screens/drawer/settings.dart';
-import 'package:encanto/screens/drawer/vender_screen.dart';
+import 'package:encanto/screens/mobile/drawer/complaints.dart';
+import 'package:encanto/screens/mobile/drawer/favorite.dart';
+import 'package:encanto/screens/mobile/drawer/review.dart';
+import 'package:encanto/screens/mobile/drawer/screens/bottomnav_events.dart';
+import 'package:encanto/screens/mobile/drawer/settings.dart';
+import 'package:encanto/screens/mobile/drawer/vender_screen.dart';
 import 'package:encanto/utils/colors.dart';
 import 'package:encanto/utils/image.dart';
 import 'package:encanto/utils/size.dart';
-import 'package:encanto/widgets/app_bar.dart';
 import 'package:encanto/widgets/global/text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -27,11 +30,12 @@ class HomePage extends StatelessWidget {
                   height: ResponsiveHelper.getHeight(context) * .200,
                   width: ResponsiveHelper.getWidth(context) * .250,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/Ellipse 6.png')),
-                      borderRadius: BorderRadius.circular(
-                        ResponsiveHelper.getWidth(context) * .050,
-                      )),
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/Ellipse 6.png')),
+                    borderRadius: BorderRadius.circular(
+                      ResponsiveHelper.getWidth(context) * .050,
+                    ),
+                  ),
                 ),
                 Textwidget(
                   text: 'Anjal',
@@ -47,10 +51,11 @@ class HomePage extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => EventsScreen(),
-                    ));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EventsScreen(),
+                  ),
+                );
               },
             ),
             Divider(
@@ -79,7 +84,14 @@ class HomePage extends StatelessWidget {
                 text: 'Favorite',
                 fontsize: ResponsiveHelper.getWidth(context) * .050,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Favoritescreen(),
+                  ),
+                );
+              },
             ),
             Divider(
               color: ColorsClass.black,
@@ -101,7 +113,14 @@ class HomePage extends StatelessWidget {
                 text: 'Complaints',
                 fontsize: ResponsiveHelper.getWidth(context) * .050,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ComplaintsScreen(),
+                  ),
+                );
+              },
             ),
             Divider(
               color: ColorsClass.black,
@@ -112,7 +131,14 @@ class HomePage extends StatelessWidget {
                 text: 'Review',
                 fontsize: ResponsiveHelper.getWidth(context) * .050,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReviewScreen(),
+                  ),
+                );
+              },
             ),
             Divider(
               color: ColorsClass.black,
@@ -167,7 +193,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  PreferredSizeWidget appBar() {
+  PreferredSizeWidget appBar(BuildContext context) {
     return AppBar(
       title: Row(
         children: [
@@ -183,7 +209,15 @@ class HomePage extends StatelessWidget {
       actions: [
         Row(
           children: [
-            Icon(Icons.favorite),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return Favoritescreen();
+                    },
+                  ));
+                },
+                child: Icon(Icons.favorite)),
             SizedBox(
               width: 20,
             ),
@@ -201,7 +235,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawerwid(context),
-      appBar: appBar(),
+      appBar: appBar(context),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -232,16 +266,24 @@ class HomePage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  eventscharitycontainer(
-                    image: Images.hpeventimg,
-                    titile: 'Events',
+                  GestureDetector(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EventsBottomnav(),
+                      ),
+                    ),
+                    child: eventscharitycontainer(
+                      image: Images.hpeventimg,
+                      titile: 'Events',
+                    ),
                   ),
                   SizedBox(
                     height: ResponsiveHelper.getHeight(context) * .040,
                   ),
                   eventscharitycontainer(
                     image: Images.hpcharity,
-                    titile: 'Events',
+                    titile: 'charity',
                   ),
                   SizedBox(
                     height: ResponsiveHelper.getHeight(context) * .020,

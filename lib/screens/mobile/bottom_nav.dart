@@ -1,8 +1,9 @@
-import 'package:encanto/auth/screens/notification_screen.dart';
-import 'package:encanto/screens/bottomnavigation/accound_scree.dart';
-import 'package:encanto/screens/bottomnavigation/offer_screen.dart';
-import 'package:encanto/screens/bottomnavigation/search_screen.dart';
-import 'package:encanto/screens/homa_page.dart';
+import 'package:encanto/screens/mobile/bottomnavigation/accound_scree.dart';
+import 'package:encanto/screens/mobile/bottomnavigation/notification_screen.dart';
+import 'package:encanto/screens/mobile/bottomnavigation/offer_screen.dart';
+import 'package:encanto/screens/mobile/bottomnavigation/search_screen.dart';
+import 'package:encanto/screens/mobile/homa_page.dart';
+
 import 'package:encanto/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -45,14 +46,19 @@ class _BottomNavState extends State<BottomNav> {
               label: 'Search',
             ),
             NavigationDestination(
-                icon: Icon(Icons.notification_important_outlined),
-                label: 'Notification'),
+              icon: Icon(Icons.notification_important_outlined),
+              label: 'Notification',
+            ),
             NavigationDestination(
-              icon: Icon(Icons.wallet_giftcard_sharp),
+              icon: Icon(
+                Icons.wallet_giftcard_sharp,
+              ),
               label: 'Offer',
             ),
             NavigationDestination(
-              icon: Icon(Icons.person),
+              icon: Icon(
+                Icons.person,
+              ),
               label: 'Account',
             ),
           ],
@@ -62,3 +68,4 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 }
+ 
