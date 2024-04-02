@@ -10,13 +10,16 @@ class Containerwidget extends StatelessWidget {
   final String text;
   final Color textcolor;
   final VoidCallback calback;
+  final double? radius;
   const Containerwidget({
     super.key,
     required this.width,
     required this.height,
     required this.bgcolor,
     required this.text,
-    required this.textcolor, required this.calback,
+    required this.textcolor,
+    required this.calback,
+    this.radius,
   });
 
   @override

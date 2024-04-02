@@ -17,4 +17,15 @@ class ColorsClass {
   static Color drawerbg = Color(0xFF6C6974);
 
   static Color wedding = Color(0xFFF8C1AF);
+
+  // reset password
+
+  static Color resetpassword = Color(0xFFE46060);
+
+  //   web
+
+  static Color webloggincolor = Color(0xFFC6C4C4);
+
+  // event screen venues bg color
+  static Color venuuesbgcolor = Color.fromARGB(0, 12, 114, 174);
 }

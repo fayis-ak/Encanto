@@ -22,7 +22,7 @@ class _SuccessfulScreenState extends State<SuccessfulScreen> {
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) {
-          return NotificationScreen();
+          return AllowNotificationScreen();
         },
       ));
     });

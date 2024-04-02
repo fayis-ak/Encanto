@@ -66,6 +66,8 @@ class SignupScreen extends StatelessWidget {
                       ],
                     ),
                     Textformwidget(
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                       fillcolor: ColorsClass.whiteColor,
                       controller: _nameController,
                       hint: 'Enter Your name',
@@ -95,6 +97,8 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                       fillcolor: ColorsClass.whiteColor,
                       maxlenght: 10,
                       controller: _numberController,
@@ -125,6 +129,8 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                       fillcolor: ColorsClass.whiteColor,
                       controller: _emailController,
                       hint: 'Enter Your Email',
@@ -154,6 +160,8 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                       fillcolor: ColorsClass.whiteColor,
                       controller: _password,
                       prifix: Icon(Icons.lock),
@@ -184,6 +192,8 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                         fillcolor: ColorsClass.whiteColor,
                         controller: _Conformpassword,
                         prifix: Icon(Icons.lock),

@@ -125,7 +125,8 @@ class LogginScreen extends StatelessWidget {
                       ),
                     ),
                     Textformwidget(
-                       
+                       radius: ResponsiveHelper.getWidth(context) * .020,
+
                       fillcolor: ColorsClass.whiteColor,
                       controller: email,
                       prifix: Icon(Icons.email),
@@ -149,12 +150,12 @@ class LogginScreen extends StatelessWidget {
                       padding: EdgeInsets.only(
                           left: ResponsiveHelper.getWidth(context) * .050),
                       child: Textwidget(
-                        text: 'password',
+                        text: 'Password',
                         fontsize: ResponsiveHelper.getWidth(context) * .040,
                       ),
                     ),
                     Textformwidget(
-                     
+                      radius: ResponsiveHelper.getWidth(context) * .020,
                       fillcolor: ColorsClass.whiteColor,
                       maxlenght: 8,
                       prifix: Icon(Icons.lock),
@@ -200,7 +201,7 @@ class LogginScreen extends StatelessWidget {
                       loggin();
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
-                          return NotificationScreen();
+                          return AllowNotificationScreen();
                         },
                       ));
                     } else {

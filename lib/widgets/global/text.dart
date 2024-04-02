@@ -7,16 +7,21 @@ class Textwidget extends StatelessWidget {
   final String text;
   final double fontsize;
   final Color? color;
-  
+  final FontWeight? fontWeight;
+
   const Textwidget(
-      {super.key, required this.text, required this.fontsize, this.color});
+      {super.key,
+      required this.text,
+      required this.fontsize,
+      this.color,
+      this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: GoogleFonts.tinos(
-        fontWeight: FontWeight.bold,
+        fontWeight: fontWeight,
         fontSize: fontsize,
         color: color,
       ),
